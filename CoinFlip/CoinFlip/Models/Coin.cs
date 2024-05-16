@@ -8,8 +8,9 @@ namespace CoinFlip.Models
 {
     public class Coin
     {
-        public string Lado { get; set; }
-        public string LadoEscolhido { get; set; }
+        //prop + enter
+        private string Ladoescolhido { get; set; }
+        private string LadoSorteado { get; set; }
 
         //Construtor tem sempre o nome da classe
         public Coin()
@@ -20,7 +21,8 @@ namespace CoinFlip.Models
         public string Jogar()
         {
             //Operador Ternario ? -> if resumido
-            return (new Random().Next(2) == 0) ? "Cara" : "Coroa";
+            LadoSorteado = new Random().Next(2) == 0 ? "Cara" : "Coroa";
+            return (LadoSorteado);
         }
 
     }
