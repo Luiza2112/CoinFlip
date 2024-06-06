@@ -9,8 +9,8 @@ namespace CoinFlip.Models
     public class Coin
     {
         //prop + enter
-        private string Ladoescolhido { get; set; }
-        private string LadoSorteado { get; set; }
+        public string Ladoescolhido { get; set; }
+        public string LadoSorteado { get; set; }
 
         //Construtor tem sempre o nome da classe
         public Coin()
