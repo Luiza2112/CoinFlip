@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace CoinFlip.ViewsModels
 {
-    internal class CoinViewModel : ObservableObject
+    public partial class CoinViewModel : ObservableObject
     {
         [ObservableProperty]
         private string resultado;
