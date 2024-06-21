@@ -6,19 +6,26 @@
     <VerticalStackLayout
         Padding="30,0"
         Spacing="25">
+        
         <Image
-        Source="{Binding Image}"/>
+        Source="{Binding Imagem}"
+        HeightRequest="185"
+        Aspect="AspectFit"/>
+        
         <Label 
-        Text="{Binding resultado}"/>
+        Text="{Binding Resultado}"
+        FontSize="Micro"/>
+        
         <Picker
-        Title="Escolha um lado da moeda">
+        Title="Escolha um lado da moeda:" SelectedItem="{Binding Escolha}">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>Cara</x:String>
-                    <x:String>Coroa</x:String>
+                    <x:String>cara</x:String>
+                    <x:String>coroa</x:String>
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
+        
         <Button
         Text="Girar a moeda"
         BackgroundColor="LightCoral"

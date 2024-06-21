@@ -15,11 +15,12 @@ namespace CoinFlip.ViewsModels
         private string resultado;
 
         [ObservableProperty]
-        public string image;
+        public string imagem;
 
         [ObservableProperty]
         public string escolha;
         
+        //Criando comando
         public ICommand JogarCommand { get;}
 
         public CoinViewModel()
@@ -29,18 +30,22 @@ namespace CoinFlip.ViewsModels
 
         public void Jogar()
         {
+            //Criando a moeda e chamando o método jogar
             Coin coin = new Coin();
             coin.Jogar();
+
+            Imagem = $"{coin.LadoSorteado}.jpeg";
 
             //Resultado = Escolha == coin.LadoSorteado ? "Você venceu" : "Você perdeu";
             if (Escolha == coin.LadoSorteado)
             {
-                Resultado = "Você venceu";
+                Resultado = "Você venceu!";
             }
-            else
+            else if(Escolha != coin.LadoSorteado)
             {
-                Resultado = "Você perdeu";
+                Resultado = "Você perdeu...";
             }
+
         }
     }
 }

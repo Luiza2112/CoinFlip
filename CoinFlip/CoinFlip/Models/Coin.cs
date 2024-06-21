@@ -21,7 +21,7 @@ namespace CoinFlip.Models
         public string Jogar()
         {
             //Operador Ternario ? -> if resumido
-            LadoSorteado = new Random().Next(2) == 0 ? "Cara" : "Coroa";
+            LadoSorteado = new Random().Next(2) == 0 ? "cara" : "coroa";
             return (LadoSorteado);
         }
 
